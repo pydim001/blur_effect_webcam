@@ -32,7 +32,7 @@ def Recording():
         #cv2.imshow("frame", grayscale)
         cv2.imshow("frame", blur_effect(7, grayscale, x, 160, 480, 120, 360)) 
         
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+        if cv2.waitKey(1) & 0xFF == ord('q'):   #you can change the key to cut the webcam off
             break
 
     cap.release()
@@ -41,4 +41,4 @@ def Recording():
 try:
     Recording()
 except IndexError:
-    print("y1 and y2 have to be between 0 and 480 and x1 and x2 have to be between 0 and 640")
+    print("y1 and y2 have to be between 1 and 480 and x1 and x2 have to be between 1 and 640")
